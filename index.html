@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Mongo Scraper</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/materia/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Cormorant+SC" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/css/style.css">
+      </head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="/">Mongo Scraper</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/saved">Saved Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-danger scrape-new">SCRAPE NEW ARTICLES!</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-danger clear">CLEAR ARTICLES!</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center">
+        <div class="overlay">
+        </div>
+        <div class="background-image">
+        </div>
+        <div class="caption">
+            <h1>Mongo Scraper</h1>
+            <p>New York Times Edition</p>
+        </div>
+    </div>
+    <div class="container-fluid article-container">
+        <div data-_id="5da0059a9dae980015c4aa0c" class="card">
+            <div class="card-header">
+                <h3>
+                    <a class="article-link" target="_blank" rel="noopener noreferrer"
+                        href="https://www.nytimes.com/interactive/2019/10/09/magazine/PewDiePie-interview.html">What
+                        Does PewDiePie Really Believe?</a>
+                    <a class="btn btn-success save">Save Article</a>
+                </h3>
+            </div>
+            <div class="card-body">The biggest YouTuber in the world has been accused of being a closet white
+                nationalist and inspiring mass shootings. He says it’s a misunderstanding.</div>
+        </div>
+        <div data-_id="5d9ff5a99dae980015c4aa01" class="card">
+            <div class="card-header">
+                <h3>
+                    <a class="article-link" target="_blank" rel="noopener noreferrer"
+                        href="https://www.nytimes.com/2019/10/10/opinion/trump-warren-facebook.html">Could Facebook
+                        Actually Nuke Elizabeth Warren’s Campaign?</a>
+                    <a class="btn btn-success save">Save Article</a>
+                </h3>
+            </div>
+            <div class="card-body">Mark Zuckerberg doesn’t need to tip the scales in 2020. His platform will do that
+                naturally.</div>
+        </div>
+        <div data-_id="5d9ff5a99dae980015c4aa02" class="card">
+            <div class="card-header">
+                <h3>
+                    <a class="article-link" target="_blank" rel="noopener noreferrer"
+                        href="https://www.nytimes.com/2019/10/09/us/francis-currey-dead.html">Francis Currey, Who at 19
+                        Was a Battle Hero, Dies at 94</a>
+                    <a class="btn btn-success save">Save Article</a>
+                </h3>
+            </div>
+            <div class="card-body">He was a one-man onslaught in the face of German tanks, earning a Medal of Honor.
+                Only two other honorees from World War II now survive.</div>
+        </div>
+        <div data-_id="5d9ff5a99dae980015c4a9ff" class="card">
+            <div class="card-header">
+                <h3>
+                    <a class="article-link" target="_blank" rel="noopener noreferrer"
+                        href="https://www.nytimes.com/2019/10/10/books/nobel-literature.html">Nobel Prize in Literature
+                        Returns With 2 Awards, and Fresh ControversyA Nobel Prize is usually a cause for celebration in
+                        the writer’s home country. In Poland, it led to controversy.</a>
+                    <a class="btn btn-success save">Save Article</a>
+                </h3>
+            </div>
+            <div class="card-body">Olga Tokarczuk and Peter Handke were honored in what was supposed to be a reset a
+                year after a messy scandal. One of the prizes sparked a backlash.</div>
+        </div>
+        <div data-_id="5d9ff5a99dae980015c4a9fd" class="card">
+            <div class="card-header">
+                <h3>
+                    <a class="article-link" target="_blank" rel="noopener noreferrer"
+                        href="https://www.nytimes.com/2019/10/10/us/politics/trump-syria-turkey.html">Analysis: In
+                        Syria, Trump Distills a Foreign Policy of ImpulseMr. Trump said that the Kurds “didn’t help” the
+                        Allies during World War II. Here’s the history.</a>
+                    <a class="btn btn-success save">Save Article</a>
+                </h3>
+            </div>
+            <div class="card-body">The president is trying to reverse the consequences as Turkish forces bombard Kurdish
+                fighters who helped overpower ISIS.</div>
+        </div>
+        <div data-_id="5d9ff5a99dae980015c4a9fe" class="card">
+            <div class="card-header">
+                <h3>
+                    <a class="article-link" target="_blank" rel="noopener noreferrer"
+                        href="https://www.nytimes.com/2019/10/10/us/california-power-outage.html">For the Most
+                        Vulnerable, California Blackouts ‘Can Be Life or Death’</a>
+                    <a class="btn btn-success save">Save Article</a>
+                </h3>
+            </div>
+            <div class="card-body">As the widespread outages in the state continued a second day, fears grew for its
+                sick and older residents.</div>
+        </div>
+        <div data-_id="5d9ff5a99dae980015c4a9fc" class="card">
+            <div class="card-header">
+                <h3>
+                    <a class="article-link" target="_blank" rel="noopener noreferrer"
+                        href="https://www.nytimes.com/2019/10/10/us/politics/rick-perry-subpoena.html">Trump
+                        Administration and Allies Pummeled With New SubpoenasTrump Angrily Attacks Rivals, Reserving His
+                        Sharpest Insults for Biden</a>
+                    <a class="btn btn-success save">Save Article</a>
+                </h3>
+            </div>
+            <div class="card-body">House investigators demanded documents from Rick Perry and testimony from the two
+                Giuliani associates who were arrested.At a fiery campaign rally, President Trump coarsely derided Joe
+                Biden’s tenure as vice president during the Obama administration.</div>
+        </div>
+        <div data-_id="5d9ff5a99dae980015c4a9fb" class="card">
+            <div class="card-header">
+                <h3>
+                    <a class="article-link" target="_blank" rel="noopener noreferrer"
+                        href="https://www.nytimes.com/2019/10/10/us/politics/lev-parnas-igor-fruman-arrested-giuliani.html">Searching
+                        for Influence, Dirt and Money in Ukraine</a>
+                    <a class="btn btn-success save">Save Article</a>
+                </h3>
+            </div>
+            <div class="card-body">To dig up information on Mr. Trump’s rivals, his lawyer turned to men who worked to
+                enlist public officials in their moneymaking and political efforts.</div>
+        </div>
+        <div data-_id="5d9ff5a99dae980015c4a9fa" class="card">
+            <div class="card-header">
+                <h3>
+                    <a class="article-link" target="_blank" rel="noopener noreferrer"
+                        href="https://www.nytimes.com/2019/10/10/us/politics/lev-parnas-igor-fruman-arrested-giuliani.html">2
+                        Giuliani Associates Arrested With One-Way Tickets at U.S. AirportSearching for Influence, Dirt
+                        and Money in UkraineIn Oval Office Meeting, Giuliani Pressed for Turkish Prisoner Swap</a>
+                    <a class="btn btn-success save">Save Article</a>
+                </h3>
+            </div>
+            <div class="card-body">To dig up information on Mr. Trump’s rivals, his lawyer turned to men who worked to
+                enlist public officials in their moneymaking and political efforts.Mr. Giuliani asked that Mr. Trump and
+                Rex Tillerson help a client who was accused in a more than $10 billion scheme to thwart Iran sanctions.
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>New York Times Mongo Scraper</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
