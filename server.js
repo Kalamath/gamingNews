@@ -1,6 +1,24 @@
 var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
+var mongodb = require("mongodb");
+
+var MongoClient = mongodb.MongoClient;
+
+var url = 'mongodb://localhost:27017/my_database_name';
+
+MongoClient.connect(url, function (err, db) {
+  if (err) {
+    console.log('Unable to connect to the mongoDB server. Error:', err);
+  } else {
+    console.log('Connection established to', url);
+
+    // do some work here with the database.
+
+    //Close connection
+    db.close();
+  }
+});
 
 // Our scraping tools
 // Axios is a promised-based http library, similar to jQuery's Ajax method
