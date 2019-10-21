@@ -1,4 +1,4 @@
-$('.btn').click(function() {
+$('.btn').click(function () {
   window.location = "http://localhost:3000/scrape";
 });
 
@@ -10,10 +10,11 @@ $.getJSON("/articles", function (data) {
     console.log(data);
     $("#article-title").append(
       "<div class='card' data-id='" + data[i]._id + "'>"
-      + data[i].title + "<br />" +
+      + "<div class='card-header'>" + data[i].title + "</div>" + "<br />" +
       "<div class='card-body'>" +
-      data[i].summary +
-      "</div>" + "<br />" + "</div>" + "<br />");
+      "<h5>" + data[i].summary + "</h5>" +
+      "</div>" + "<br />" + "<a href='" + "gamespot.com" + data[i].link + "'>" + "See here" + "</a>" + "</div>" + "<br />"
+    );
   }
 });
 
