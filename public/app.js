@@ -12,7 +12,7 @@ $.getJSON("/articles", function (data) {
       "<div class='card' data-id='" + data[i]._id + "'>"
       + data[i].title + "<br />" +
       "<div class='card-body'>" +
-      data[i].link +
+      data[i].summary +
       "</div>" + "<br />" + "</div>" + "<br />");
   }
 });
