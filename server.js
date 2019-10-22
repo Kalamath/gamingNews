@@ -7,23 +7,6 @@ var dotenv = require("dotenv");
 
 dotenv.config();
 
-// var MongoClient = mongodb.MongoClient;
-
-// var url = 'mongodb://<dbuser>:<dbpassword>@ds233258.mlab.com:33258/heroku_9blmm9bp';
-
-// MongoClient.connect(url, function (err, db) {
-//   if (err) {
-//     console.log('Unable to connect to the mongoDB server. Error:', err);
-//   } else {
-//     console.log('Connection established to', url);
-
-//     // do some work here with the database.
-
-//     //Close connection
-//     db.close();
-//   }
-// });
-
 // Our scraping tools
 // Axios is a promised-based http library, similar to jQuery's Ajax method
 // It works on the client and on the server
