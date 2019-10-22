@@ -1,24 +1,28 @@
 var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-var mongodb = require("mongodb");
+// var mongodb = require("mongodb");
 
-var MongoClient = mongodb.MongoClient;
+var dotenv = require("dotenv");
 
-var url = 'mongodb://<dbuser>:<dbpassword>@ds233258.mlab.com:33258/heroku_9blmm9bp';
+dotenv.config();
 
-MongoClient.connect(url, function (err, db) {
-  if (err) {
-    console.log('Unable to connect to the mongoDB server. Error:', err);
-  } else {
-    console.log('Connection established to', url);
+// var MongoClient = mongodb.MongoClient;
 
-    // do some work here with the database.
+// var url = 'mongodb://<dbuser>:<dbpassword>@ds233258.mlab.com:33258/heroku_9blmm9bp';
 
-    //Close connection
-    db.close();
-  }
-});
+// MongoClient.connect(url, function (err, db) {
+//   if (err) {
+//     console.log('Unable to connect to the mongoDB server. Error:', err);
+//   } else {
+//     console.log('Connection established to', url);
+
+//     // do some work here with the database.
+
+//     //Close connection
+//     db.close();
+//   }
+// });
 
 // Our scraping tools
 // Axios is a promised-based http library, similar to jQuery's Ajax method
@@ -45,7 +49,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/gamingNewz", { useNewUrlParser: true });
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/gamingNewz";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Routes
 
