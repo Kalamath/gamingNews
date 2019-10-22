@@ -54,6 +54,11 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Routes
 
+app.get("/", function (req, res) {
+  // Grab every document in the Articles collection
+  res.redirect('/articles');
+});
+
 // A GET route for scraping the echoJS website
 app.get("/scrape", function (req, res) {
   // First, we grab the body of the html with axios
@@ -85,19 +90,6 @@ app.get("/scrape", function (req, res) {
     // Send a message to the client
     res.send("Scrape Complete");
   });
-});
-
-app.get("/", function (req, res) {
-  // Grab every document in the Articles collection
-  db.Article.find({})
-    .then(function (dbArticle) {
-      // If we were able to successfully find Articles, send them back to the client
-      res.json(dbArticle);
-    })
-    .catch(function (err) {
-      // If an error occurred, send it to the client
-      res.json(err);
-    });
 });
 
 // Route for getting all Articles from the db
