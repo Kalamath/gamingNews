@@ -33,7 +33,7 @@ app.use(express.static("public"));
 
 // Connect to the Mongo DB
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/gamingNewz";
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true});
 
 // Routes
 
@@ -48,6 +48,7 @@ app.get("/scrape", function (req, res) {
   axios.get("http://www.gamespot.com/").then(function (response) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(response.data);
+    console.log(response.data);
 
     // Now, we grab every h2 within an article tag, and do the following:
     $("article").each(function (i, element) {
@@ -58,20 +59,26 @@ app.get("/scrape", function (req, res) {
       result.title = $(element).find("h3").text();
       result.summary = $(element).find("p").text();
       result.link = $(element).find("a").attr("href");
+      console.log("I am about to freate a thing")
+      console.log(result);
 
       // Create a new Article using the `result` object built from scraping
       db.Article.create(result)
         .then(function (dbArticle) {
           // View the added result in the console
+          console.log("I have created a thing");
           console.log(dbArticle);
         })
         .catch(function (err) {
+          console.log("I had a problem creating the thing")
           // If an error occurred, log it
           console.log(err);
         });
-    });
+    })
     // Send a message to the client
     res.send("Scrape Complete");
+  }).catch(function(err) {
+    console.log(err);
   });
 });
 
