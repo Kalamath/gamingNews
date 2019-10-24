@@ -1,5 +1,9 @@
-$('.btn').click(function () {
+$('.scrape').click(function () {
   window.location = "http://localhost:3000/scrape";
+});
+
+$('.articles').click(function () {
+  window.location = "http://localhost:3000/articles";
 });
 
 // Grab the articles as a json
@@ -19,7 +23,7 @@ $.getJSON("/articles", function (data) {
 });
 
 // Whenever someone clicks a p tag
-$(document).on("click", "p", function () {
+$(document).on("click", "h5", function () {
   // Empty the notes from the note section
   $("#notes").empty();
   // Save the id from the p tag

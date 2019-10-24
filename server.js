@@ -37,9 +37,13 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true}
 
 // Routes
 
-app.get("/", function (req, res) {
-  // Grab every document in the Articles collection
-  res.redirect('/articles');
+// Log any mongojs errors to console
+db.on("error", function(error) {
+  console.log("Database Error:", error);
+});
+
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname + "./public/index.html"));
 });
 
 // A GET route for scraping the echoJS website
